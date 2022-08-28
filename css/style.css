@@ -20,6 +20,7 @@
 
 img{
     width: 100%;
+    border-radius: 7px 7px 0 0;
 }
 
 body{
@@ -32,6 +33,10 @@ body{
     width: 100%;
 }
 
+section{
+    padding: 4rem 0 3rem;
+}
+
 /* header */
 
 header{
@@ -41,6 +46,7 @@ header{
     width: 100%;
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
 }
 
 .nav{
@@ -59,4 +65,80 @@ header{
 #cart-icon{
     font-size: 1.8rem;
     cursor: pointer;
+}
+
+/* cart */
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+}
+
+/* shop */
+
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.shop{
+    margin-top: 2rem;
+}
+
+/* Shopping items */
+
+.shopping-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+.product-box{
+    position: relative;
+    border-radius: 7px 7px 0 0;
+}
+
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.Product-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    font-weight: 600;
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-cart:hover{
+    background: hsl(249, 32%, 17%);
 }
